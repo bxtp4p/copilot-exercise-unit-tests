@@ -1,0 +1,13 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/python:3",
+
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "README.md"
+      ]
+    }
+  },
+
+  "onCreateCommand": "git clone https://github.com/bxtp4p/copilot-app-taskapp.git && cd copilot-app-task-app && rm -fr .git"
+}
