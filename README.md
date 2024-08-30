@@ -1,10 +1,10 @@
 # Adding Unit Tests
 
-This exercise focuses on unit tests. Using the [Task App](../../../apps/taskapp/README.md), add unit tests to the app to ensure that it behaves as expected.
+This exercise focuses on unit tests. Using the [Task App](https://github.com/bxtp4p/copilot-app-taskapp), add unit tests to the app to ensure that it behaves as expected.
 
 ## Problem
 
-The [Task App](../../../apps/taskapp/README.md) has no unit tests. This makes it difficult to ensure that the app behaves as expected and that future changes do not introduce regressions.
+The [Task App](https://github.com/bxtp4p/copilot-app-taskapp) has no unit tests. This makes it difficult to ensure that the app behaves as expected and that future changes do not introduce regressions.
 
 ## Task
 
