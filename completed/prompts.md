@@ -1,13 +1,10 @@
 # Unit Test Prompts
 
-> **Note:** *@workspace how do I add unit tests to this Python application?*
+Below are the list of prompts used to generate the final state. The prompts are designed to guide the user through the process of learning how to add unit tests with GitHub Copilot. The user can choose to follow the prompts in order, or skip around as needed. The prompts are designed to be flexible and can be adapted to the specific needs of the user.
 
-<details>
-   <summary><b>Copilot Response:</b></summary>
+**Note:** All prompts done in Visual Studio Code. Some agents and slash commands may not be available in other IDEs.
 
-</details>
-
-Below are the list of prompts used to generate the unit tests for the Task App.
+## Prompts
 
 ## Task: Learn how to add unit tests to a Python application
 
