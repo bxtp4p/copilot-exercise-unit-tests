@@ -1,73 +1,73 @@
 # Adding Unit Tests
 
-This exercise focuses on unit tests. Using the [Task App](https://github.com/bxtp4p/copilot-app-taskapp), add unit tests to the app to ensure that it behaves as expected.
+This exercise focuses on writing unit tests for the Task App. You will use GitHub Copilot to help generate the necessary test cases, ensuring the application behaves as expected and that future changes do not introduce regressions.
 
-## Problem
+## Overview
 
-The [Task App](https://github.com/bxtp4p/copilot-app-taskapp) has no unit tests. This makes it difficult to ensure that the app behaves as expected and that future changes do not introduce regressions.
+In this exercise, you'll use GitHub Copilot to create a suite of unit tests for the [Task App](https://github.com/bxtp4p/copilot-app-taskapp). These tests will verify the functionality of key features like task creation, modification, completion, and deletion. The goal is to ensure the app behaves correctly in different scenarios while isolating the code under test from external dependencies using mocks and stubs.
+
+## Learning Objectives
+
+By the end of this exercise, you will be able to:
+1. **Write Comprehensive Unit Tests**: Generate unit tests that cover key scenarios for task creation, modification, completion, and deletion.
+2. **Isolate Code with Mocks and Stubs**: Use mocks and stubs to ensure your tests focus on the behavior of the code being tested.
+3. **Refactor for Testability**: Identify and refactor areas of the application code to make it more testable.
+4. **Measure Code Coverage**: Use a coverage tool to evaluate how well your tests cover the application code.
+5. **Experiment with Functional and Performance Testing**: Extend the exercise to include functional and performance tests for a broader evaluation of the app.
+
+## Setup
+
+To begin, clone the [Task App repository](https://github.com/bxtp4p/copilot-app-taskapp) and follow the instructions in the README to set up the project locally.
+
+## Problem Statement
+
+The Task App currently lacks unit tests, making it difficult to ensure the application behaves as expected and preventing future changes from being confidently tested. Writing a robust set of unit tests will improve confidence in the application’s reliability and reduce the risk of regressions.
 
 ## Task
 
-Add unit tests to the Task App to ensure that it behaves as expected. The tests should cover the following scenarios:
+Use GitHub Copilot to generate unit tests that cover the following scenarios:
 
-- **Task Creation:**
+- **Task Creation**:
+  - Test that tasks can be created with a valid title and description.
+  - Ensure that tasks cannot be created without a title or with an excessively long title or description.
 
-  - Ensure that a task can be created with a title and description.
-  - Ensure that a task cannot be created without a title.
-  - Ensure that a task cannot be created with a title that is too long.
-  - Ensure that a task cannot be created with a description that is too long.
+- **Task Completion**:
+  - Verify that tasks can be marked as complete or incomplete.
 
-- **Task Completion:**
+- **Task Retrieval**:
+  - Ensure that tasks can be retrieved by their ID, and test for error handling when the task ID does not exist.
 
-  - Ensure that a task can be marked as complete.
-  - Ensure that a task can be marked as incomplete.
+- **Task Modification**:
+  - Test that existing tasks can be successfully modified.
 
-- **Task Retrieval:**
+- **Task Deletion**:
+  - Verify that tasks can be deleted from the task list.
 
-  - Ensure that a task can be retrieved by ID.
-  - Ensure that a task cannot be retrieved if it is not in the list of tasks.
+- **Task Listing**:
+  - Test that a list of tasks can be retrieved.
 
-- **Task Modification:**
-
-  - Ensure that a task can be modified.
-
-- **Task Deletion:**
-
-  - Ensure that a task can be deleted.
-
-- **Task Listing:**
-
-  - Ensure that a list of tasks can be retrieved.
+Additionally, refactor the application code where necessary to improve its testability and to ensure all tests pass.
 
 ## Expected Outcome
 
-After completing this exercise, you should have a suite of unit tests that cover the scenarios listed above. The tests should be able to run in isolation and should not depend on any external services or resources. The application code should be refactored as needed to make it more testable and in order to pass the tests.
+Upon completion, you should have a comprehensive suite of unit tests that:
+- Validate the behavior of key features of the Task App.
+- Run independently and in isolation from external services using mocks and stubs.
+- Ensure full test coverage for critical areas of the application.
+- Include any necessary refactoring to make the code more testable.
 
-- **Use a Testing Framework:**
-  - Use a testing framework like `unittest` or `pytest` to write your tests. These frameworks provide utilities for setting up and tearing down test fixtures, as well as for running tests and reporting results.
+### Bonus
 
-- **Use Mocks and Stubs:**
-  - Use mocks and stubs to isolate the code under test from its dependencies. This will make your tests more reliable and easier to maintain.
-
-## Bonus Points
-
-- **Code Coverage:**
-  - Use a code coverage tool like `coverage.py` to measure the code coverage of your tests. Aim for 100% code coverage.
-
-- **Functional Tests:**
-  - Write functional tests that exercise the app as a whole. These tests should cover the same scenarios as the unit tests, but should do so by interacting with the app and/or the API.
-
-- **Performance Tests:**
-  - Write performance tests that measure the performance of the app under various conditions. These tests should help you identify bottlenecks and other performance issues.
+- **Code Coverage**: Measure the coverage of your tests using a tool like `coverage.py` and aim for high coverage (ideally 100%).
+- **Functional and Performance Testing**: Expand the exercise by writing functional tests that interact with the app as a whole, and performance tests to evaluate the app’s responsiveness under load.
 
 ## Tips
 
-- Don't expect GitHub Copilot to produce perfect results, all of the time. It's a tool to help you write code, but it's up to you to decide what to do with its suggestions. Feel free to modify the code as you see fit.
+- **Iterate with Copilot**: GitHub Copilot can help generate unit test cases, but its output may need refinement. Don’t hesitate to adjust the code for accuracy and completeness.
+- **Use Copilot Chat**: If you encounter any issues or need clarification on writing tests, GitHub Copilot Chat can guide you. For example, if you're unsure about how to mock an external service, you can ask, *"How do I use mocks in Python’s unittest framework?"*
+- **Leverage Test Frameworks**: Use testing frameworks like `unittest` or `pytest` to structure your tests and take advantage of utilities like setup/teardown functions.
+- **Explore Code Coverage**: Use tools like `coverage.py` to measure your test coverage and identify untested areas of your code.
 
-- If you don't understand how to do something, or if you get stuck, don't hesitate to ask GitHub Copilot Chat for help. Think of it as a seasoned expert in the thing you're trying to do who can help guide you in the right direction. Don't be afraid to ask it questions! For example, if you don't know what kinds of diagrams Mermaid supports, you could ask "What kinds of diagrams does Mermaid support?" and it will give you a list of the supported diagram types.
+## Example Solution
 
-- Use the `/help` command in GitHub Copilot Chat to get a list of commands you can use to interact with.
-
-An example result of this exercise can be found in the [`copilot-exercise-unit-tests-completed`](https://github.com/bxtp4p/copilot-app-taskapp/tree/copilot-exercise-unit-tests-completed) branch of the [Task App](https://github.com/bxtp4p/copilot-app-taskapp). Note that this is just one possible solution as GitHub Copilot is generative and the results may be different on each iteration. Feel free to experiment and try different approaches. If you're still stuck, you can refer to the [completed](https://github.com/bxtp4p/copilot-exercise-unit-tests/tree/completed) branch in this repo for the prompts used to generate the results. Prompts will be located in the `/completed` directory.
-
-
+An example solution can be found in the [`copilot-exercise-unit-tests-completed`](https://github.com/bxtp4p/copilot-app-taskapp/tree/copilot-exercise-unit-tests-completed) branch of the [Task App repository](https://github.com/bxtp4p/copilot-app-taskapp). Keep in mind that GitHub Copilot’s suggestions may vary on each iteration, so feel free to experiment with different approaches. If you're stuck, refer to the [completed](https://github.com/bxtp4p/copilot-exercise-unit-tests/tree/completed) branch for the prompts and test cases used in the solution, which are located in the `/completed` directory.
